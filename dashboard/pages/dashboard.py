@@ -25,7 +25,7 @@ fig = px.choropleth(latest_df, locations="Country/Region", locationmode="country
                     color_continuous_scale="Reds")
 st.plotly_chart(fig)
 
-st.markdown("Cases All Over The World Analysis")
+st.markdown("Key Insights : ")
 st.markdown('1. This graph shows the impact of covid 19 cases all over the world.')
 st.markdown("2. The more red the area is , the greater the impact of covid 19 cases is.")
 
@@ -41,7 +41,7 @@ fig = px.bar(top_countries, x="Country/Region", y="Confirmed",
              title="Top 10 Countries with Most Cases", color="Confirmed")
 st.plotly_chart(fig)
 
-st.markdown("Most Cases Bar Plot Analysis")
+st.markdown("Key Insights : ")
 st.markdown("1. The country with the most cases is - United States")
 st.markdown("2. The country with the least cases is  - Iran")
 
@@ -58,7 +58,7 @@ fig = px.bar(top_countries, x="Country/Region",
              color_continuous_scale='sunsetdark')
 st.plotly_chart(fig)
 
-st.markdown('Death Bar Chart Analysis')
+st.markdown('Key Insights : ')
 st.markdown('1. The country with the most deaths is - United States')
 st.markdown("2. The country with the least deaths is - Iran")
 
@@ -75,7 +75,7 @@ fig = px.bar(top_countries, x="Country/Region",
              color_continuous_scale='sunset')
 st.plotly_chart(fig)
 
-st.markdown('Active Cases Bar Chart Analysis')
+st.markdown('Key Insights :')
 st.markdown('1. The country with the most active cases is - United States')
 st.markdown("2. The country with the least active cases is - Italy")
 
@@ -86,7 +86,7 @@ fig = px.scatter(df, x="Confirmed", y="Deaths", color="Country/Region",
                  title="Relationship Between Confirmed Cases and Deaths")
 st.plotly_chart(fig)
 
-st.markdown('Scatter Plot Analysis')
+st.markdown('Key Insights :')
 
 st.markdown('1. Linear Trend (Proportional Increase in Deaths with Cases)')
 
@@ -118,7 +118,7 @@ fig = px.line(
 
 st.plotly_chart(fig)
 
-st.markdown("Line Chart Analysis")
+st.markdown("Key Insights :")
 st.markdown('1. Steep Upward Slope (Rapid Increase in Cases) → Indicates outbreak waves or sudden surges in infections.')
 st.markdown('2. Plateau (Flattening of the Curve) → Suggests containment or declining infection rates.')
 st.markdown('3. Recovery Rate Trends → If the Recovered line is close to the Confirmed Cases line, it suggests a high recovery rate.')
@@ -143,7 +143,7 @@ fig.update_traces(marker=dict(colors=["#FFA500", "#228B22", "#DC143C"]))
 st.plotly_chart(fig)
 
 
-st.markdown("Distribution Analysis on the basis of countries")
+st.markdown("Key Insights :")
 
 st.markdown('1. Higher Recovery Percentage → Indicates effective treatment and containment.')
 st.markdown('2. High Active Cases → Suggests ongoing transmission and new infections.')
@@ -164,7 +164,7 @@ sns.heatmap(pivot_df.fillna(0), cmap="RdYlBu", ax=ax)
 st.pyplot(fig)
 
 
-st.markdown('Heatmap Analysis')
+st.markdown('Key Insights :')
 st.markdown('1. Darker Colors = More Cases → Indicates high case surges (peaks in transmission).')
 st.markdown('2. Lighter Colors = Fewer Cases → Suggests effective control or early outbreak stage.')
 st.markdown('3. Clusters of High Cases → Reveal waves or spikes of infection (e.g., lockdown periods, new variants).')
